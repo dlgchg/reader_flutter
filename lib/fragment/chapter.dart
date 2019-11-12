@@ -5,6 +5,7 @@ import 'package:reader_flutter/page/read.dart';
 import 'package:reader_flutter/util/constants.dart';
 import 'package:reader_flutter/util/http_manager.dart';
 import 'package:reader_flutter/view/load.dart';
+import 'package:reader_flutter/view/draggable_scrollbar.dart';
 
 class ChapterPage extends StatefulWidget {
   @override
@@ -21,6 +22,7 @@ class _ChapterPageState extends State<ChapterPage>
     with AutomaticKeepAliveClientMixin {
   List<Volume> _volumes = [];
   List<Chapter> _chapters = [];
+  ScrollController _rrectController = ScrollController();
 
   @override
   initState() {
@@ -89,6 +91,7 @@ class _ChapterPageState extends State<ChapterPage>
         change(chapter);
       },
       child: Container(
+        height: 60,
         padding: EdgeInsets.only(left: 20),
         child: Align(
           alignment: Alignment.centerLeft,
@@ -110,15 +113,16 @@ class _ChapterPageState extends State<ChapterPage>
   Widget build(BuildContext context) {
     return _chapters.length == 0
         ? LoadingPage()
-        : AdsorptionView(
-            itemHeight: 60,
-            adsorptionDatas: _chapters,
-            generalItemChild: (Chapter chapter) {
-              return _chapterText(chapter);
-            },
-            headChild: (Chapter chapter) {
-              return _volumeText(chapter);
-            },
+        : Scaffold(
+            body: DraggableScrollbar.rrect(
+                controller: _rrectController,
+                child: ListView.builder(
+                  cacheExtent: 100,
+                  controller: _rrectController,
+                  itemBuilder: (context, index) =>
+                      _chapterText(_chapters[index]),
+                  itemCount: _chapters.length,
+                )),
           );
   }
 

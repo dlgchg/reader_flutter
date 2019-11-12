@@ -12,7 +12,7 @@ class CatalogPage extends StatefulWidget {
 
   final callBack2;
 
-  CatalogPage(this.bookId, {this.callBack1,this.callBack2});
+  CatalogPage(this.bookId, {this.callBack1, this.callBack2});
 }
 
 class _CatalogPageState extends State<CatalogPage>
