@@ -1,12 +1,11 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
-import 'package:reader_flutter/bean/banner.dart';
-import 'package:reader_flutter/page/list_detail.dart';
+import 'package:reader/bean/banner.dart';
+import 'package:reader/page/special/special_detail.dart';
 
 Widget bannerWidget(BuildContext context, List<MyBanner> imgs) {
   return CarouselSlider(
-    height: 160.0,
     items: imgs.map((img) {
       return Builder(
         builder: (BuildContext context) {
@@ -31,6 +30,7 @@ Widget bannerWidget(BuildContext context, List<MyBanner> imgs) {
         },
       );
     }).toList(),
+    options: CarouselOptions(height: 160.0),
   );
 //  return BannerView(
 //    data: imgs,

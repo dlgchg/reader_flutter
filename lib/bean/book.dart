@@ -1,5 +1,5 @@
 import 'package:path/path.dart';
-import 'package:reader_flutter/util/util.dart';
+import 'package:reader/util/common_util.dart';
 import 'package:sqflite/sqflite.dart';
 
 /// status : 1
@@ -124,7 +124,7 @@ class BookSqlite {
 //根据数据库文件路径和数据库版本号创建数据库表
     db = await openDatabase(path, version: 1,
         onCreate: (Database db, int version) async {
-          await db.execute('''
+      await db.execute('''
           CREATE TABLE $tableBook (
             $columnId INTEGER PRIMARY KEY, 
             $columnPosition INTEGER,
@@ -138,7 +138,7 @@ class BookSqlite {
             $columnCName TEXT,
             $columnUpdateTime TEXT)
           ''');
-        });
+    });
   }
 
 // 插入一条书籍数据

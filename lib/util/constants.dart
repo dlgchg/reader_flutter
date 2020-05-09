@@ -6,7 +6,7 @@ class AppColors {
   static const BackgroundColor = Colors.white;
   static const AppBarColor = Colors.redAccent;
 
-  static const TabNormal = Color(0xff3b3f47);
+  static const TabNormal = Colors.grey;
   static const TabActive = MainColor;
 
   static const VolumeColor = Color(0xfff5f7fa);
@@ -66,5 +66,3 @@ class StringConstants {
     "shijiancaokongshi",
   ];
 }
-
-class DimenConstants {}

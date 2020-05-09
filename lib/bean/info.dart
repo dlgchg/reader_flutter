@@ -1,4 +1,4 @@
-import 'package:reader_flutter/util/util.dart';
+import 'package:reader/util/common_util.dart';
 
 /// status : 1
 /// info : "success"

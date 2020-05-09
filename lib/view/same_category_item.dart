@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:reader_flutter/bean/info.dart';
-import 'package:reader_flutter/page/info.dart';
+import 'package:reader/bean/info.dart';
+import 'package:reader/page/info/info_detail.dart';
 
 Widget sameCategoryBookItem(
     BuildContext context, int index, SameCategoryBooksBean book) {
@@ -9,22 +9,25 @@ Widget sameCategoryBookItem(
     onTap: () {
       Navigator.push(context,
           MaterialPageRoute(builder: (BuildContext context) {
-        return InfoPage(book.Name, book.Id);
+        return InfoDetailPage(book.Name, book.Id);
       }));
     },
     highlightColor: Colors.black12,
     child: Container(
-      margin: EdgeInsets.only(left: 20, top: 5, bottom: 5, right: 20),
-      height: 80.0,
+      margin: EdgeInsets.only(left: 10, top: 5, bottom: 5, right: 10),
+      height: 100.0,
       child: Row(
         children: <Widget>[
-          ClipRRect(
-            borderRadius: BorderRadius.circular(2.0),
-            child: CachedNetworkImage(
-              imageUrl: book.Img,
-              fit: BoxFit.cover,
-              width: 60,
-              height: 80,
+          Card(
+            elevation: 4.0,
+            child: ClipRRect(
+              borderRadius: BorderRadius.circular(2.0),
+              child: CachedNetworkImage(
+                imageUrl: book.Img,
+                fit: BoxFit.cover,
+                width: 75.0,
+                height: 100.0,
+              ),
             ),
           ),
           Expanded(
@@ -37,9 +40,10 @@ Widget sameCategoryBookItem(
                   Text(
                     book.Name,
                     style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                        fontSize: 16.0),
+                      fontWeight: FontWeight.w500,
+                      color: Colors.black,
+                      fontSize: 14.0,
+                    ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 1,
                   ),

@@ -1,7 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:reader_flutter/bean/list.dart';
-import 'package:reader_flutter/page/list_detail.dart';
+import 'package:reader/bean/list.dart';
+import 'package:reader/page/special/special_detail.dart';
 
 Widget bookListItem(BuildContext context, int index, BookList bookList) {
   return InkWell(
@@ -13,19 +13,22 @@ Widget bookListItem(BuildContext context, int index, BookList bookList) {
     },
     highlightColor: Colors.black12,
     child: Container(
-      height: 100.0,
-      margin: EdgeInsets.all(5),
+      height: 80.0,
+      margin: EdgeInsets.all(10.0),
       child: Row(
         children: <Widget>[
           Hero(
             tag: bookList.ListId,
-            child: ClipRRect(
-              borderRadius: BorderRadius.circular(2.0),
-              child: CachedNetworkImage(
-                imageUrl: bookList.Cover,
-                fit: BoxFit.cover,
-                width: 60,
-                height: 80,
+            child: Card(
+              elevation: 4.0,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(2.0),
+                child: CachedNetworkImage(
+                  imageUrl: bookList.Cover,
+                  fit: BoxFit.cover,
+                  width: 60,
+                  height: 80,
+                ),
               ),
             ),
           ),
@@ -39,18 +42,18 @@ Widget bookListItem(BuildContext context, int index, BookList bookList) {
                   Text(
                     bookList.Title,
                     style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black,
-                        fontSize: 16.0),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 12.0,
+                    ),
                     overflow: TextOverflow.ellipsis,
-                    maxLines: 1,
+                    maxLines: 2,
                   ),
                   Text(
                     bookList.Description,
                     style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        color: Colors.black38,
-                        fontSize: 14.0),
+                      fontWeight: FontWeight.w500,
+                      fontSize: 12.0,
+                    ),
                     overflow: TextOverflow.ellipsis,
                     maxLines: 2,
                   ),

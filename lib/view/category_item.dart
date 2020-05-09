@@ -1,9 +1,9 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
-import 'package:reader_flutter/bean/category.dart';
-import 'package:reader_flutter/page/category_rank.dart';
-import 'package:reader_flutter/util/constants.dart';
-import 'package:reader_flutter/util/util.dart';
+import 'package:reader/bean/category.dart';
+import 'package:reader/page/category/category_rank.dart';
+import 'package:reader/util/constants.dart';
+import 'package:reader/util/common_util.dart';
 
 Widget categoryItem(BuildContext context, int index, MyCategory category) {
   return GestureDetector(
@@ -15,28 +15,32 @@ Widget categoryItem(BuildContext context, int index, MyCategory category) {
       },
       child: Stack(
         children: <Widget>[
-          ClipRRect(
-            child: Container(
-              decoration: BoxDecoration(
-                  image: DecorationImage(
-                image: CachedNetworkImageProvider(
-                  getCompleteImgUrl(
-                      "${StringConstants.categoryImages[index]}.jpg"),
-                ),
-                fit: BoxFit.cover,
-              )),
+          Card(
+            margin: EdgeInsets.zero,
+            elevation: 8.0,
+            child: ClipRRect(
               child: Container(
-                color: Colors.black.withOpacity(.3),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                  image: CachedNetworkImageProvider(
+                    getCompleteImgUrl(
+                        "${StringConstants.categoryImages[index]}.jpg"),
+                  ),
+                  fit: BoxFit.cover,
+                )),
+                child: Container(
+                  color: Colors.black.withOpacity(.3),
+                ),
               ),
+              borderRadius: BorderRadius.all(Radius.circular(1)),
             ),
-            borderRadius: BorderRadius.all(Radius.circular(1)),
           ),
           Container(
             margin: EdgeInsets.all(5),
             child: Text(
               category.Name,
               style: TextStyle(
-                fontSize: 14,
+                fontSize: 12,
                 color: Colors.white,
               ),
             ),
