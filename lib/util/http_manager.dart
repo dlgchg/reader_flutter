@@ -3,19 +3,19 @@ import 'dart:convert';
 import 'package:dio/dio.dart';
 
 class Api {
-  static const baseUrl = "https://quapp.1122dh.com";
+  static const baseUrl = "https://scxs.pigqq.com";
   static const searchApi = "https://sou.jiaston.com/search.aspx";
-  static const storeSexApi = "https://quapp.1122dh.com/v5/base";
-  static const storeSexBannerApi = "https://quapp.1122dh.com/v5/base";
-  static const categoryApi = "https://quapp.1122dh.com/BookCategory";
-  static const listApi = "https://quapp.1122dh.com/shudan";
-  static const rankApi = "https://quapp.1122dh.com/top";
-  static const infoApi = "https://quapp.1122dh.com/info";
+  static const storeSexApi = "https://scxs.pigqq.com/v5/base";
+  static const storeSexBannerApi = "https://scxs.pigqq.com/v5/base";
+  static const categoryApi = "https://scxs.pigqq.com/BookCategory";
+  static const listApi = "https://scxs.pigqq.com/shudan";
+  static const rankApi = "https://scxs.pigqq.com/top";
+  static const infoApi = "https://scxs.pigqq.com/info";
   static const commentApi = "http://changyan.sohu.com/api/2/topic/load";
-  static const listDetailApi = "https://quapp.1122dh.com/shudan/detail";
-  static const categoryRankApi = "https://quapp.1122dh.com/Categories";
-  static const chaptersApi = "https://quapp.1122dh.com/book";
-  static const chapterApi = "https://quapp.1122dh.com/book";
+  static const listDetailApi = "https://scxs.pigqq.com/shudan/detail";
+  static const categoryRankApi = "https://scxs.pigqq.com/Categories";
+  static const chaptersApi = "https://scxs.pigqq.com/book";
+  static const chapterApi = "https://scxs.pigqq.com/book";
 }
 
 Future<Map> searchBook(String key, int page) async {
