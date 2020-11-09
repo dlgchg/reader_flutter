@@ -1,16 +1,12 @@
-# reader
-
-A new Flutter application.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+# reader_flutter
+#   reader_flutter
+#   预览
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/1.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/2.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/3.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/4.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/5.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/6.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/7.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/8.png)
+![image](https://github.com/lycstar/reader_flutter/blob/master/preview/9.png)
