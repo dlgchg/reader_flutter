@@ -1,5 +1,4 @@
 # reader_flutter
-#   reader_flutter
 #   预览
 ![image](https://github.com/lycstar/reader_flutter/blob/master/preview/1.png)
 ![image](https://github.com/lycstar/reader_flutter/blob/master/preview/2.png)
