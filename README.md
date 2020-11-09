@@ -1,5 +1,5 @@
 # reader_flutter
-# 使用Flutter编写的小说阅读app
+## 使用Flutter编写的小说阅读app
 ## Screenshots 📸
 
 | ![1](https://github.com/lycstar/reader_flutter/blob/master/1.jpg) | ![2](https://github.com/lycstar/reader_flutter/blob/master/2.jpg) | ![3](https://github.com/lycstar/reader_flutter/blob/master/3.jpg) |
