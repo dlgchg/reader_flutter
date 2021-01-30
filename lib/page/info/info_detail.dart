@@ -130,7 +130,7 @@ class _BookInfoState extends State<InfoDetailPage>
               _catalog(),
               _author(),
               _category(),
-              _comment(),
+              // _comment()
             ],
           ),
         ),

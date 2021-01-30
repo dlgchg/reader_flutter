@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GlowNotificationWidget(
       MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Reader',
         theme: ThemeData(
           primarySwatch: Colors.red,
